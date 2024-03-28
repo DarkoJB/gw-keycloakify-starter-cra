@@ -66,10 +66,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         This is just to show you how it can be done but this is not the best option for importing assets.
                         See: https://docs.keycloakify.dev/importing-assets#importing-custom-assets
                     */}
-                    <img src={`${PUBLIC_URL}/keycloakify-logo.png`} alt="Keycloakify logo" width={50} />
-                    {msg("loginTitleHtml", realm.displayNameHtml)}!!!
+                    <img src={`${PUBLIC_URL}/raccoon-logo.png`} alt="" width={50} />
+                    {msg("loginTitleHtml", realm.displayNameHtml)}
                     {/* This is the preferred way to use assets */}
-                    <img src={keycloakifyLogoPngUrl} alt="Keycloakify logo" width={50} />
+                    {/* <img src={keycloakifyLogoPngUrl} alt="Keycloakify logo" width={50} /> */}
                 </div>
             </div>
 
