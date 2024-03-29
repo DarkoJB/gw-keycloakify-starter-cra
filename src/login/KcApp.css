@@ -1,3 +1,5 @@
+/* ALL CUSTOM OR OVERRIDDEN STYLES NEED TO BE PLACED HERE */
+
 .my-color {
 	color: #f2f2f2;
 }
@@ -13,4 +15,92 @@
 .my-root-class body {
 	background: no-repeat center center fixed;
 	background-color: #0e0e0e;
+}
+
+.kcHeaderWrapperClass {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.loginTitle {
+	font-weight: 700;
+	padding-top: 0.25rem;
+}
+
+
+/* Login input container box */
+.login-pf-page .card-pf {
+    color: #f2f2f2;
+    background-color: #333333;
+    margin-bottom: 10px;
+	height: fit-content;
+}
+
+.inputField {
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.50);
+	background-color: #595959;
+	color: #f2f2f2;
+    font-size: small;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	::placeholder{
+		color: #fff;
+	}
+}
+
+.forgotPassword {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #f2f2f2;
+
+    :hover {
+        color: #f2f2f2;
+    }
+}
+
+.submitBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.customSubmitButton {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+.registerHyperlink {
+    color: #f2f2f2;
+    text-decoration: underline;
+
+    :hover {
+        color: #f2f2f2;
+    }
+}
+
+#kc-registration {
+    color: #f2f2f2;
+    margin-bottom: 15px;
+}
+
+#kc-form-options .checkbox {
+    margin-top: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #f2f2f2;
+}
+
+.backToLogin{
+	color: #f2f2f2;
+	:hover{
+		color: #f2f2f2;
+	}
 }

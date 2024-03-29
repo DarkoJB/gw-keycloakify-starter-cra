@@ -49,7 +49,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                 !registrationDisabled
             }
             displayWide={realm.password && social.providers !== undefined}
-            headerNode={msg("doLogIn")}
+            headerNode={<div className="loginTitle">{msg("doLogIn")}</div>}
             infoNode={
                 <div id="kc-registration">
                     <span>
@@ -157,7 +157,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 />
                                 <input
                                     tabIndex={4}
-                                    className={clsx('submitButton')}
+                                    className={clsx('submitButton', 'customSubmitButton')}
                                     name="login"
                                     id="kc-login"
                                     type="submit"

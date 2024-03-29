@@ -25,7 +25,7 @@ export default function LogoutConfirm(
   const { msg } = i18n;
 
   function redirectOnSave() {
-    window.location.href = environment.portalUrl;
+    window.open(environment.portalUrl, "_blank");
   }
 
   return (
@@ -128,7 +128,7 @@ export default function LogoutConfirm(
             <div>
               <button
                 type="submit"
-                className={clsx("submitButton")}
+                className={clsx("submitButton", "accSettingsSaveButton")}
                 name="submitAction"
                 value="Save"
                 onClick={redirectOnSave}

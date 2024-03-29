@@ -8,7 +8,7 @@ import { type TemplateProps } from "keycloakify/login/TemplateProps";
 import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "./kcContext";
 import type { I18n } from "./i18n";
-import keycloakifyLogoPngUrl from "./assets/keycloakify-logo.png";
+import raccoonLogo from "./assets/raccoon-logo.png";
 import { PUBLIC_URL } from "keycloakify/PUBLIC_URL";
 
 console.log({ PUBLIC_URL });
@@ -62,12 +62,10 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     className={getClassName("kcHeaderWrapperClass")}
                     style={{ "fontFamily": '"Work Sans"' }}
                 >
-                    {/* 
-                        This is just to show you how it can be done but this is not the best option for importing assets.
-                        See: https://docs.keycloakify.dev/importing-assets#importing-custom-assets
-                    */}
-                    {msg("loginTitleHtml", realm.displayNameHtml)}
-                    {/* This is the preferred way to use assets */}
+                <img src={raccoonLogo} alt="Keycloakify logo" width={50} />
+                <span className="loginTitle">
+                    {msg("loginTitleHtml", realm.displayNameHtml ) }
+                </span>
                 </div>
             </div>
 
