@@ -66,37 +66,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         This is just to show you how it can be done but this is not the best option for importing assets.
                         See: https://docs.keycloakify.dev/importing-assets#importing-custom-assets
                     */}
-                    <img src={`${PUBLIC_URL}/raccoon-logo.png`} alt="" width={50} />
                     {msg("loginTitleHtml", realm.displayNameHtml)}
                     {/* This is the preferred way to use assets */}
-                    {/* <img src={keycloakifyLogoPngUrl} alt="Keycloakify logo" width={50} /> */}
                 </div>
             </div>
 
             <div className={clsx(getClassName("kcFormCardClass"), displayWide && getClassName("kcFormCardAccountClass"))}>
                 <header className={getClassName("kcFormHeaderClass")}>
-                    {realm.internationalizationEnabled && (assert(locale !== undefined), true) && locale.supported.length > 1 && (
-                        <div id="kc-locale">
-                            <div id="kc-locale-wrapper" className={getClassName("kcLocaleWrapperClass")}>
-                                <div className="kc-dropdown" id="kc-locale-dropdown">
-                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                    <a href="#" id="kc-current-locale-link">
-                                        {labelBySupportedLanguageTag[currentLanguageTag]}
-                                    </a>
-                                    <ul>
-                                        {locale.supported.map(({ languageTag }) => (
-                                            <li key={languageTag} className="kc-dropdown-item">
-                                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                                <a href="#" onClick={() => changeLocale(languageTag)}>
-                                                    {labelBySupportedLanguageTag[languageTag]}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    )}
                     {!(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
                         displayRequiredFields ? (
                             <div className={getClassName("kcContentWrapperClass")}>

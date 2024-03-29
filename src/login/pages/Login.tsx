@@ -54,7 +54,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                 <div id="kc-registration">
                     <span>
                         {msg("noAccount")}
-                        <a tabIndex={6} href={url.registrationUrl}>
+                        <a className="registerHyperlink" tabIndex={6} href={url.registrationUrl}>
                             {msg("doRegister")}
                         </a>
                     </span>
@@ -84,13 +84,10 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
 
                                         return (
                                             <>
-                                                <label htmlFor={autoCompleteHelper} className={getClassName("kcLabelClass")}>
-                                                    {msg(label)}
-                                                </label>
                                                 <input
                                                     tabIndex={1}
                                                     id={autoCompleteHelper}
-                                                    className={getClassName("kcInputClass")}
+                                                    className={`${getClassName("kcInputClass")} inputField`}
                                                     //NOTE: This is used by Google Chrome auto fill so we use it to tell
                                                     //the browser how to pre fill the form but before submit we put it back
                                                     //to username because it is what keycloak expects.
@@ -99,22 +96,21 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                                     type="text"
                                                     autoFocus={true}
                                                     autoComplete="off"
+                                                    placeholder="Username or email"
                                                 />
                                             </>
                                         );
                                     })()}
                             </div>
                             <div className={getClassName("kcFormGroupClass")}>
-                                <label htmlFor="password" className={getClassName("kcLabelClass")}>
-                                    {msg("password")}
-                                </label>
                                 <input
                                     tabIndex={2}
                                     id="password"
-                                    className={getClassName("kcInputClass")}
+                                    className={`${getClassName("kcInputClass")} inputField`}
                                     name="password"
                                     type="password"
                                     autoComplete="off"
+                                    placeholder="password"
                                 />
                             </div>
                             <div className={clsx(getClassName("kcFormGroupClass"), getClassName("kcFormSettingClass"))}>
@@ -141,14 +137,14 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 <div className={getClassName("kcFormOptionsWrapperClass")}>
                                     {realm.resetPasswordAllowed && (
                                         <span>
-                                            <a tabIndex={5} href={url.loginResetCredentialsUrl}>
+                                            <a className="forgotPassword" tabIndex={5} href={url.loginResetCredentialsUrl}>
                                                 {msg("doForgotPassword")}
                                             </a>
                                         </span>
                                     )}
                                 </div>
                             </div>
-                            <div id="kc-form-buttons" className={getClassName("kcFormGroupClass")}>
+                            <div id="kc-form-buttons"  className={`${getClassName("kcFormGroupClass")} submitBtnContainer`}>
                                 <input
                                     type="hidden"
                                     id="id-hidden-input"
@@ -161,12 +157,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 />
                                 <input
                                     tabIndex={4}
-                                    className={clsx(
-                                        getClassName("kcButtonClass"),
-                                        getClassName("kcButtonPrimaryClass"),
-                                        getClassName("kcButtonBlockClass"),
-                                        getClassName("kcButtonLargeClass")
-                                    )}
+                                    className={clsx('submitButton')}
                                     name="login"
                                     id="kc-login"
                                     type="submit"
