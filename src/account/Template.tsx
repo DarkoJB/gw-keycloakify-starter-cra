@@ -91,7 +91,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 <a href={url.passwordUrl}>{msg("password")}</a>
                             </li>
                         )}
-                        <li className={clsx(active === "totp" && "active")}>
+                        {/* <li className={clsx(active === "totp" && "active")}>
                             <a href={url.totpUrl}>{msg("authenticator")}</a>
                         </li>
                         {features.identityFederation && (
@@ -114,7 +114,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                             <li className={clsx(active === "authorization" && "active")}>
                                 <a href={url.resourceUrl}>{msg("myResources")}</a>
                             </li>
-                        )}
+                        )} */}
                     </ul>
                 </div>
 
