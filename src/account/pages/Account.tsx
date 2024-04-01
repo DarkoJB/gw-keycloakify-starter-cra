@@ -24,8 +24,8 @@ export default function Account(
   const { msg } = i18n;
 
   function redirectOnSave() {
-    window.open(environment.portalUrl, "_self");
-  }
+    window.open(environment.portalUrl, "_blank");
+      }
 
   return (
     <Template

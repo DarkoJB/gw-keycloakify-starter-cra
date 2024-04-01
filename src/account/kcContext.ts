@@ -14,7 +14,8 @@ export const { getKcContext } = createGetKcContext<KcContextExtension>({
 });
 
 export const { kcContext } = getKcContext({
-	//mockPageId: "password.ftl",
+	//Uncomment line below and run 'yarn start' to serve the given .ftl page locally
+	// mockPageId: "account.ftl",
 });
 
 export type KcContext = NonNullable<ReturnType<typeof getKcContext>["kcContext"]>;
